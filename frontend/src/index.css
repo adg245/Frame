@@ -1,0 +1,274 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── THEME DEFINITIONS ─────────────────────────────────────────────────── */
+
+:root,
+[data-theme="cinema-night"] {
+  --bg-main: #101114;
+  --bg-secondary: #181A1F;
+  --bg-card: #20232A;
+  --bg-elevated: #282B33;
+  --text-primary: #F1EFE8;
+  --text-secondary: #A8A9AE;
+  --text-muted: #666870;
+  --accent: #C6A66B;
+  --accent-hover: #D4B87C;
+  --accent-muted: rgba(198,166,107,0.12);
+  --accent-muted-strong: rgba(198,166,107,0.22);
+  --border: #30333A;
+  --border-subtle: #24272E;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.5);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.6);
+  --overlay: rgba(16,17,20,0.85);
+  --overlay-strong: rgba(16,17,20,0.95);
+  --rating-gold: #F5C518;
+  --success: #4CAF7A;
+  --danger: #E05252;
+  --scrollbar-thumb: #30333A;
+  --scrollbar-track: #181A1F;
+  --input-bg: #181A1F;
+}
+
+[data-theme="noir"] {
+  --bg-main: #0C0C0D;
+  --bg-secondary: #141416;
+  --bg-card: #1C1C1F;
+  --bg-elevated: #222226;
+  --text-primary: #E8E8E8;
+  --text-secondary: #8A8A8F;
+  --text-muted: #55555A;
+  --accent: #B0B0B8;
+  --accent-hover: #C8C8D0;
+  --accent-muted: rgba(176,176,184,0.10);
+  --accent-muted-strong: rgba(176,176,184,0.18);
+  --border: #2A2A2E;
+  --border-subtle: #1E1E22;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.6);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.7);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.8);
+  --overlay: rgba(12,12,13,0.88);
+  --overlay-strong: rgba(12,12,13,0.97);
+  --rating-gold: #D4AF37;
+  --success: #4A9E6E;
+  --danger: #C44A4A;
+  --scrollbar-thumb: #2A2A2E;
+  --scrollbar-track: #141416;
+  --input-bg: #141416;
+}
+
+[data-theme="burgundy-premiere"] {
+  --bg-main: #120B0E;
+  --bg-secondary: #1C1015;
+  --bg-card: #26161C;
+  --bg-elevated: #301C23;
+  --text-primary: #F0E8E8;
+  --text-secondary: #B09898;
+  --text-muted: #6E5050;
+  --accent: #C4869A;
+  --accent-hover: #D49AAE;
+  --accent-muted: rgba(196,134,154,0.12);
+  --accent-muted-strong: rgba(196,134,154,0.22);
+  --border: #3A2028;
+  --border-subtle: #2A1820;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.5);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.6);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.7);
+  --overlay: rgba(18,11,14,0.88);
+  --overlay-strong: rgba(18,11,14,0.97);
+  --rating-gold: #F5C518;
+  --success: #4CAF7A;
+  --danger: #E05252;
+  --scrollbar-thumb: #3A2028;
+  --scrollbar-track: #1C1015;
+  --input-bg: #1C1015;
+}
+
+[data-theme="midnight-blue"] {
+  --bg-main: #0A0D14;
+  --bg-secondary: #10141E;
+  --bg-card: #181D2A;
+  --bg-elevated: #1E2435;
+  --text-primary: #E8EDF5;
+  --text-secondary: #8A96B0;
+  --text-muted: #505870;
+  --accent: #7B9FD4;
+  --accent-hover: #90B2E2;
+  --accent-muted: rgba(123,159,212,0.12);
+  --accent-muted-strong: rgba(123,159,212,0.22);
+  --border: #22283A;
+  --border-subtle: #181E2C;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.5);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.6);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.7);
+  --overlay: rgba(10,13,20,0.88);
+  --overlay-strong: rgba(10,13,20,0.97);
+  --rating-gold: #F5C518;
+  --success: #4CAF7A;
+  --danger: #E05252;
+  --scrollbar-thumb: #22283A;
+  --scrollbar-track: #10141E;
+  --input-bg: #10141E;
+}
+
+[data-theme="forest-cinema"] {
+  --bg-main: #0A0F0C;
+  --bg-secondary: #0F1611;
+  --bg-card: #161E18;
+  --bg-elevated: #1C2620;
+  --text-primary: #E8EDE8;
+  --text-secondary: #8A9E8A;
+  --text-muted: #506050;
+  --accent: #7DAE82;
+  --accent-hover: #90BE96;
+  --accent-muted: rgba(125,174,130,0.12);
+  --accent-muted-strong: rgba(125,174,130,0.22);
+  --border: #1E2E20;
+  --border-subtle: #162018;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.5);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.6);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.7);
+  --overlay: rgba(10,15,12,0.88);
+  --overlay-strong: rgba(10,15,12,0.97);
+  --rating-gold: #F5C518;
+  --success: #4CAF7A;
+  --danger: #E05252;
+  --scrollbar-thumb: #1E2E20;
+  --scrollbar-track: #0F1611;
+  --input-bg: #0F1611;
+}
+
+[data-theme="ivory-matinee"] {
+  --bg-main: #F5F0E8;
+  --bg-secondary: #EDE8DF;
+  --bg-card: #E6E0D6;
+  --bg-elevated: #DDD8CE;
+  --text-primary: #1A1814;
+  --text-secondary: #5A5650;
+  --text-muted: #9A9890;
+  --accent: #8B6E3C;
+  --accent-hover: #7A5E2E;
+  --accent-muted: rgba(139,110,60,0.10);
+  --accent-muted-strong: rgba(139,110,60,0.18);
+  --border: #D0C8BC;
+  --border-subtle: #DAD4C8;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+  --overlay: rgba(245,240,232,0.92);
+  --overlay-strong: rgba(245,240,232,0.98);
+  --rating-gold: #C8930A;
+  --success: #3A8A5A;
+  --danger: #C44040;
+  --scrollbar-thumb: #C8C0B4;
+  --scrollbar-track: #EDE8DF;
+  --input-bg: #EDE8DF;
+}
+
+/* ─── BASE ───────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+img { display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* ─── SKELETON ───────────────────────────────────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position: 600px 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg,
+    var(--bg-card) 25%,
+    var(--bg-elevated) 50%,
+    var(--bg-card) 75%
+  );
+  background-size: 600px 100%;
+  animation: shimmer 1.5s ease infinite;
+  border-radius: 4px;
+}
+
+/* ─── UTILITIES ──────────────────────────────────────────────────────────── */
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+
+.aspect-poster   { aspect-ratio: 2 / 3; }
+.aspect-backdrop { aspect-ratio: 16 / 9; }
+
+.font-display { font-family: 'Playfair Display', Georgia, serif; }
+
+.line-clamp-1 { overflow:hidden; display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; }
+.line-clamp-2 { overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; }
+.line-clamp-3 { overflow:hidden; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; }
+.line-clamp-4 { overflow:hidden; display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; }
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.glass {
+  background: var(--overlay);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+}
+
+.gradient-bottom {
+  background: linear-gradient(to bottom, transparent 0%, var(--bg-main) 100%);
+}
+.gradient-right {
+  background: linear-gradient(to right, var(--bg-main) 35%, transparent 100%);
+}
+.gradient-poster-overlay {
+  background: linear-gradient(
+    to top,
+    var(--bg-main) 0%,
+    rgba(0,0,0,0.5) 50%,
+    transparent 100%
+  );
+}
+
+/* ─── ANIMATIONS ─────────────────────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in { animation: fadeIn 0.3s ease forwards; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+.animate-spin { animation: spin 0.8s linear infinite; }
+
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
+.animate-pulse { animation: pulse 2s ease infinite; }
+
+@keyframes bounce {
+  0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)}
+}
+.animate-bounce { animation: bounce 1s ease infinite; }

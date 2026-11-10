@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  frontend:
+    name: Frontend — type-check & build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - run: npm install
+      - run: npm run type-check
+      - run: npm run build
+        env:
+          # A build-time placeholder — real values are injected by Vercel at
+          # deploy time. The frontend degrades gracefully without them (see
+          # isSupabaseConfigured in src/lib/supabase.ts), so a plain build
+          # doesn't need real secrets.
+          VITE_API_BASE_URL: /api
+
+  backend:
+    name: Backend — type-check & build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      # `npm install` triggers the `postinstall` script (prisma generate),
+      # which only reads the schema file — it needs no real DATABASE_URL.
+      - run: npm install
+      - run: npm run type-check
+      - run: npm run build
